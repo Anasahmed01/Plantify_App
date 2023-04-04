@@ -87,14 +87,7 @@ class _LoginViewState extends State<LoginView> {
                     ),
                   ),
                 ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const LoginView(),
-                    ),
-                  );
-                },
+                onPressed: () {},
                 child: text(
                     text: 'MASUK',
                     fontSize: 20,
