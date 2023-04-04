@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:plantify_in/viewmodels/login_viewmodel.dart';
 import 'package:plantify_in/views/signup_view.dart';
-import 'package:plantify_in/views/widgetviews/glob_widget.dart';
+import 'package:plantify_in/widgetviews/glob_widget.dart';
 import 'package:stacked/stacked.dart';
 
 class LoginView extends StatelessWidget {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:plantify_in/viewmodels/signup_viewmodel.dart';
 import 'package:plantify_in/views/login_view.dart';
-import 'package:plantify_in/views/widgetviews/glob_widget.dart';
 import 'package:stacked/stacked.dart';
+import 'package:plantify_in/widgetviews/glob_widget.dart';
 
 import 'home_view.dart';
 
