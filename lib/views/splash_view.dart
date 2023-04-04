@@ -1,16 +1,17 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:plantify_in/views/login_view.dart';
 import 'package:plantify_in/views/widgetviews/glob_widget.dart';
 
-class LoginView extends StatefulWidget {
-  const LoginView({super.key});
+class SplashView extends StatefulWidget {
+  const SplashView({super.key});
 
   @override
-  State<LoginView> createState() => _LoginViewState();
+  State<SplashView> createState() => _LoginViewState();
 }
 
-class _LoginViewState extends State<LoginView> {
+class _LoginViewState extends State<SplashView> {
   @override
   void initState() {
     super.initState();
@@ -32,18 +33,18 @@ class _LoginViewState extends State<LoginView> {
             alignment: Alignment.center,
             children: const [
               Image(
-                image: AssetImage('assets/images/Rectangle 118.png'),
+                image: AssetImage('lib/assets/images/Rectangle 118.png'),
               ),
               Padding(
                 padding: EdgeInsets.only(bottom: 140),
                 child: Image(
-                  image: AssetImage('assets/images/Group 46.png'),
+                  image: AssetImage('lib/assets/images/Group 46.png'),
                 ),
               ),
               Padding(
                 padding: EdgeInsets.only(top: 280),
                 child: Image(
-                  image: AssetImage('assets/images/Plantify.png'),
+                  image: AssetImage('lib/assets/images/Plantify.png'),
                 ),
               ),
             ],

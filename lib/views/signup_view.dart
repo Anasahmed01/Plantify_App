@@ -32,7 +32,7 @@ class SignUpView extends StatelessWidget {
                     },
                     iconSize: 50,
                     icon: const Image(
-                      image: AssetImage('assets/images/Group 36.png'),
+                      image: AssetImage('lib/assets/images/Group 36.png'),
                     ),
                   ),
                   Padding(
@@ -40,7 +40,8 @@ class SignUpView extends StatelessWidget {
                     child: Row(
                       children: [
                         const Image(
-                          image: AssetImage('assets/images/Group 46 (1).png'),
+                          image:
+                              AssetImage('lib/assets/images/Group 46 (1).png'),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 30.0),
