@@ -49,7 +49,7 @@ class LoginView extends StatelessWidget {
                       padding: const EdgeInsets.only(top: 20),
                       child: text(
                         text:
-                            'Masukan NISN dan password untuk \nmemulai belajar sekarang',
+                            'Enter NISN and password for\n start studying now',
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                         color: const Color(0xff0D986A),

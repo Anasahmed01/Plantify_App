@@ -64,7 +64,7 @@ class _LoginViewState extends State<SplashView> {
             child: SizedBox(
               child: text(
                 text:
-                    'Jelajahi AiLearn untuk menambah kemampuanmu \ndalam mengoperasikan Adobe Illustrator',
+                    'Explore AiLearn to increase your skills\n in operating Adobe Illustrator',
                 fontSize: 15,
                 fontWeight: FontWeight.w400,
                 color: const Color(0xff0D986A),

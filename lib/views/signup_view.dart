@@ -64,7 +64,7 @@ class SignUpView extends StatelessWidget {
                     padding: const EdgeInsets.only(right: 10.0, top: 40),
                     child: text(
                       text:
-                          'Masukan No. Handphone Anda dan tunggu kode \nautentik dikirimkan',
+                          'Enter your email & password to regester your account',
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
                       color: const Color(0xff0D986A),
