@@ -15,4 +15,8 @@ class HomeViewModel extends BaseViewModel {
       ),
     );
   }
+
+  void closeDrawer(BuildContext context) {
+    Navigator.of(context).pop();
+  }
 }

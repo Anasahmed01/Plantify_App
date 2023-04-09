@@ -14,9 +14,10 @@ class HomeView extends StatelessWidget {
         return DefaultTabController(
           length: 5,
           child: Scaffold(
+            drawer: drawer(context),
             appBar: AppBar(
               automaticallyImplyLeading: false,
-              backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+              backgroundColor: secondary,
               title: Padding(
                 padding: const EdgeInsets.only(right: 10.0),
                 child: Row(
@@ -47,16 +48,23 @@ class HomeView extends StatelessWidget {
                           image: AssetImage('lib/assets/images/Group 153.png'),
                         ),
                       ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: const Image(
-                          image: AssetImage('lib/assets/images/Frame 97.png'),
-                        ),
-                      ),
                     ],
                   ),
                 ),
               ],
+              leading: Builder(
+                builder: (context) => lastRoundContainer(
+                  Padding(
+                    padding: const EdgeInsets.only(left: 12.0),
+                    child: InkWell(
+                      onTap: () => Scaffold.of(context).openDrawer(),
+                      child: const Image(
+                        image: AssetImage('lib/assets/images/Frame 97.png'),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ),
             body: Padding(
               padding: const EdgeInsets.all(10.0),
