@@ -60,110 +60,220 @@ class HomeView extends StatelessWidget {
             ),
             body: Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Column(
-                children: [
-                  SizedBox(
-                    width: 500,
-                    height: 200,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(15),
-                      child: Image.asset('lib/assets/images/Group 73.png',
-                          height: 150,
-                          width: MediaQuery.of(context).size.width,
-                          fit: BoxFit.cover),
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    SizedBox(
+                      width: 500,
+                      height: 200,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(15),
+                        child: Image.asset('lib/assets/images/Group 73.png',
+                            height: 150,
+                            width: MediaQuery.of(context).size.width,
+                            fit: BoxFit.cover),
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 30.0),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        prefixIcon: const Padding(
-                          padding: EdgeInsets.only(left: 20.0, right: 25),
-                          child: Icon(Icons.search_rounded),
-                        ),
-                        hintText: 'Search',
-                        suffixIcon: IconButton(
-                          onPressed: () {},
-                          icon: const Image(
-                            image: AssetImage('lib/assets/images/Group 76.png'),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 30.0),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          prefixIcon: const Padding(
+                            padding: EdgeInsets.only(left: 20.0, right: 25),
+                            child: Icon(Icons.search_rounded),
                           ),
-                        ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(15.0),
+                          hintText: 'Search',
+                          suffixIcon: IconButton(
+                            onPressed: () {},
+                            icon: const Image(
+                              image:
+                                  AssetImage('lib/assets/images/Group 76.png'),
+                            ),
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 10.0),
-                    child: TabBar(
-                        unselectedLabelColor: Colors.black,
-                        indicator: UnderlineTabIndicator(
-                          insets: const EdgeInsets.symmetric(horizontal: 10.0),
-                          borderSide:
-                              BorderSide(color: backgroundColor, width: 2.0),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10.0),
+                      child: TabBar(
+                          unselectedLabelColor: Colors.black,
+                          indicator: UnderlineTabIndicator(
+                            insets:
+                                const EdgeInsets.symmetric(horizontal: 10.0),
+                            borderSide:
+                                BorderSide(color: primaryColor, width: 2.0),
+                          ),
+                          indicatorSize: TabBarIndicatorSize.label,
+                          labelColor: primaryColor,
+                          isScrollable: true,
+                          tabs: const [
+                            Tab(
+                              text: 'Top Pick',
+                            ),
+                            Tab(
+                              text: 'Indoor',
+                            ),
+                            Tab(
+                              text: 'Outdoor',
+                            ),
+                            Tab(
+                              text: 'Seeds',
+                            ),
+                            Tab(
+                              text: 'Planters',
+                            ),
+                          ]),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10.0),
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width * 9.9,
+                        height: 300,
+                        child: Stack(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 40.0),
+                              child: SizedBox(
+                                width: 300,
+                                height: 200,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(15),
+                                  child: Image.asset(
+                                    'lib/assets/images/Rectangle 27.png',
+                                  ),
+                                ),
+                              ),
+                            ),
+                            const Image(
+                              image: AssetImage(
+                                  'lib/assets/images/Mask Group.png'),
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(top: 105, left: 40),
+                              child: text(
+                                  text: 'Peperomia',
+                                  fontSize: 32,
+                                  fontWeight: FontWeight.w700,
+                                  color: Colors.black),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                left: 215.0,
+                              ),
+                              child: SizedBox(
+                                height: 200,
+                                width: 200,
+                                child: ClipRRect(
+                                  child: Image.asset(
+                                    'lib/assets/images/Peperomia Obtusfolia.png',
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 80, left: 40),
+                              child: SizedBox(
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      children: [
+                                        text(
+                                            text: 'Air Purifier',
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w600,
+                                            color: Colors.black),
+                                        const Padding(
+                                          padding: EdgeInsets.only(left: 20.0),
+                                          child: Image(
+                                            image: AssetImage(
+                                                'lib/assets/images/Group 66.png'),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 70, right: 255),
+                                      child: SizedBox(
+                                        child: Row(
+                                          children: [
+                                            text(
+                                                text: '\$400',
+                                                fontSize: 25,
+                                                fontWeight: FontWeight.w600,
+                                                color: Colors.black),
+                                            viewModel.gestureDetector(),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
-                        indicatorSize: TabBarIndicatorSize.label,
-                        labelColor: backgroundColor,
-                        isScrollable: true,
-                        tabs: const [
-                          Tab(
-                            text: 'Top Pick',
-                          ),
-                          Tab(
-                            text: 'Indoor',
-                          ),
-                          Tab(
-                            text: 'Outdoor',
-                          ),
-                          Tab(
-                            text: 'Seeds',
-                          ),
-                          Tab(
-                            text: 'Planters',
-                          ),
-                        ]),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            bottomNavigationBar: ClipRRect(
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(30.0),
+                topRight: Radius.circular(30.0),
+              ),
+              child: BottomNavigationBar(
+                items: <BottomNavigationBarItem>[
+                  const BottomNavigationBarItem(
+                    icon: Padding(
+                      padding: EdgeInsets.only(top: 10.0),
+                      child: Image(
+                        image: AssetImage('lib/assets/images/Group 56.png'),
+                      ),
+                    ),
+                    label: '',
                   ),
-                  Center(
-                    child: HomeViewModel.widgetOptions
-                        .elementAt(viewModel.selectedIndex),
+                  BottomNavigationBarItem(
+                    icon: IconButton(
+                      iconSize: 40,
+                      onPressed: () {},
+                      icon: const Image(
+                        image: AssetImage('lib/assets/images/Vector 1.png'),
+                      ),
+                    ),
+                    label: '',
+                  ),
+                  BottomNavigationBarItem(
+                    icon: IconButton(
+                      iconSize: 40,
+                      onPressed: () {},
+                      icon: const Image(
+                        image: AssetImage('lib/assets/images/Group 57.png'),
+                      ),
+                    ),
+                    label: '',
+                  ),
+                  BottomNavigationBarItem(
+                    icon: Padding(
+                      padding: const EdgeInsets.only(top: 5.0),
+                      child: IconButton(
+                        iconSize: 40,
+                        onPressed: () {},
+                        icon: const Image(
+                          image: AssetImage('lib/assets/images/Group 143.png'),
+                        ),
+                      ),
+                    ),
+                    label: '',
                   ),
                 ],
               ),
-            ),
-            bottomNavigationBar: BottomNavigationBar(
-              items: const <BottomNavigationBarItem>[
-                BottomNavigationBarItem(
-                  icon: Padding(
-                    padding: EdgeInsets.only(top: 10.0),
-                    child: Image(
-                      image: AssetImage('lib/assets/images/Group 56.png'),
-                    ),
-                  ),
-                  label: '',
-                ),
-                BottomNavigationBarItem(
-                  icon: Image(
-                    image: AssetImage('lib/assets/images/Vector 1.png'),
-                  ),
-                  label: '',
-                ),
-                BottomNavigationBarItem(
-                  icon: Image(
-                    image: AssetImage('lib/assets/images/Group 57.png'),
-                  ),
-                  label: '',
-                ),
-                BottomNavigationBarItem(
-                  icon: Image(
-                    image: AssetImage('lib/assets/images/Group 143.png'),
-                  ),
-                  label: '',
-                ),
-              ],
-              currentIndex: viewModel.selectedIndex,
-              selectedItemColor: Colors.blue,
-              onTap: viewModel.onItemTapped,
             ),
           ),
         );
