@@ -6,12 +6,17 @@ class HomeViewModel extends BaseViewModel {
   gestureDetector() {
     return GestureDetector(
       onTap: () {
+        if (isClicked == true) {
+          isClicked = false;
+        } else {
+          isClicked = true;
+        }
         rebuildUi();
-        isClicked = !isClicked;
       },
       child: Icon(
-        Icons.favorite,
-        color: isClicked ? Colors.red : Colors.grey,
+        Icons.favorite_outlined,
+        size: 40,
+        color: isClicked ? Colors.black : Colors.black45,
       ),
     );
   }

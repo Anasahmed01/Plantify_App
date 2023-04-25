@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:plantify_in/views/home_view.dart';
 import 'package:plantify_in/views/splash_view.dart';
 
 void main() {
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeView(),
+      home: SplashView(),
     );
   }
 }

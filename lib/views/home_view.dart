@@ -135,97 +135,38 @@ class HomeView extends StatelessWidget {
                             ),
                           ]),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 10.0),
-                      child: SizedBox(
-                        width: MediaQuery.of(context).size.width * 9.9,
-                        height: 300,
-                        child: Stack(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(top: 40.0),
-                              child: SizedBox(
-                                width: 300,
-                                height: 200,
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(15),
-                                  child: Image.asset(
-                                    'lib/assets/images/Rectangle 27.png',
-                                  ),
-                                ),
-                              ),
-                            ),
-                            const Image(
-                              image: AssetImage(
-                                  'lib/assets/images/Mask Group.png'),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.only(top: 105, left: 40),
-                              child: text(
-                                  text: 'Peperomia',
-                                  fontSize: 32,
-                                  fontWeight: FontWeight.w700,
-                                  color: Colors.black),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                left: 215.0,
-                              ),
-                              child: SizedBox(
-                                height: 200,
-                                width: 200,
-                                child: ClipRRect(
-                                  child: Image.asset(
-                                    'lib/assets/images/Peperomia Obtusfolia.png',
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 80, left: 40),
-                              child: SizedBox(
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        text(
-                                            text: 'Air Purifier',
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.w600,
-                                            color: Colors.black),
-                                        const Padding(
-                                          padding: EdgeInsets.only(left: 20.0),
-                                          child: Image(
-                                            image: AssetImage(
-                                                'lib/assets/images/Group 66.png'),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                          top: 70, right: 255),
-                                      child: SizedBox(
-                                        child: Row(
-                                          children: [
-                                            text(
-                                                text: '\$400',
-                                                fontSize: 25,
-                                                fontWeight: FontWeight.w600,
-                                                color: Colors.black),
-                                            viewModel.gestureDetector(),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                    contentContainer(
+                      backgroundImgA: 'lib/assets/images/Rectangle 27.png',
+                      backgroundImgB: 'lib/assets/images/Mask Group.png',
+                      itemName: 'Peperomia',
+                      productImg: 'lib/assets/images/Peperomia Obtusfolia.png',
+                      productImgHeight: 200,
+                      productImgwidth: 200,
+                      productAmount: '\$400',
+                      favorite: viewModel.gestureDetector(),
+                      context: context,
+                    ),
+                    contentContainer(
+                      backgroundImgA: 'lib/assets/images/Rectangle 28.png',
+                      backgroundImgB: 'lib/assets/images/Mask Group.png',
+                      itemName: 'Watermelon..',
+                      productImg: 'lib/assets/images/sage.png',
+                      productImgHeight: 200,
+                      productImgwidth: 200,
+                      productAmount: '\$350',
+                      favorite: viewModel.gestureDetector(),
+                      context: context,
+                    ),
+                    contentContainer(
+                      backgroundImgA: 'lib/assets/images/Rectangle 27.png',
+                      backgroundImgB: 'lib/assets/images/Mask Group.png',
+                      itemName: 'Croton Petra',
+                      productImg: 'lib/assets/images/interior medium light.png',
+                      productImgHeight: 200,
+                      productImgwidth: 200,
+                      productAmount: '\$200',
+                      favorite: viewModel.gestureDetector(),
+                      context: context,
                     ),
                   ],
                 ),
@@ -274,7 +215,7 @@ class HomeView extends StatelessWidget {
                         iconSize: 40,
                         onPressed: () {},
                         icon: const Image(
-                          image: AssetImage('lib/assets/images/Group 143.png'),
+                          image: AssetImage('lib/assets/images/Group 111.png'),
                         ),
                       ),
                     ),
